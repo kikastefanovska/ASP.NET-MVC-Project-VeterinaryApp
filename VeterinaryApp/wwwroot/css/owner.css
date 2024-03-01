@@ -1,0 +1,6 @@
+﻿.image {
+    position: absolute;
+    right: -70px;
+    top: -100px;
+    transform: scale(0.5);
+}

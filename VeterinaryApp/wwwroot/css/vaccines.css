@@ -1,0 +1,14 @@
+﻿.image {
+    position: absolute;
+    top: -23px;
+    right: 150px;
+    transform: scale(0.5);
+    border-bottom-left-radius: 10px;
+}
+
+.image2 {
+    transform: scale(0.7);
+    position: absolute;
+    right: 100px;
+    bottom: -100px;
+}

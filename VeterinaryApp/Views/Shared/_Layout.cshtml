@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Pet Clinic</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/VeterinaryApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+	<header>
+		<div style="background-color: darkblue; height: 60px; padding-bottom: 30px; margin-bottom: 20px;">
+			<ul style="display: flex; justify-content: space-between; padding: 7px 100px; font-size: 16px; list-style: none;">
+				<li class="nav-item">
+					<a style="color: white; font-size: 25px; margin-top: -5px" class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+				</li>
+				<li class="nav-item">
+					<a style="color: white; font-size: 25px; margin-top: -5px" class="nav-link" asp-area="" asp-controller="Owners1" asp-action="Index">Owner</a>
+				</li>
+				<li class="nav-item">
+					<a style="color: white; font-size: 25px; margin-top: -5px" class="nav-link" asp-area="" asp-controller="Pets1" asp-action="Index">Pet</a>
+				</li>
+				<li class="nav-item">
+					<a style="color: white; font-size: 25px; margin-top: -5px" class="nav-link" asp-area="" asp-controller="Vaccines1" asp-action="Index">Vaccine</a>
+				</li>
+				<li class="nav-item">
+					<a style="color: white; font-size: 25px; margin-top: -5px" class="nav-link" asp-area="" asp-controller="AboutUs" asp-action="Index">About</a>
+				</li>
+				<li class="nav-item">
+					<a style="color: white; font-size: 25px; margin-top: -5px" class="nav-link" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+
+		</main>
+	</div>
+
+	<footer class="footer">
+		<div class="socials">
+			<div class="social">
+				<a href="https://www.facebook.com" target="_blank"><img class="img1" src="images/Facebook_Logo_2023.png" /></a>
+			</div>
+			<div class="social">
+				<a href="https://www.instagram.com" target="_blank"><img class="img2" src="images/Instagram_logo_2016.svg.png" /></a>
+			</div>
+		</div>
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

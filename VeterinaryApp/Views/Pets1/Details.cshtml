@@ -1,0 +1,49 @@
+﻿@model VeterinaryApp.Models.Pet
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pet</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Owner:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Owner.FullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class = "col-sm-2">
+            Name:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+          <dt class="col-sm-2">
+            Vaccine:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vaccines)
+    </dl>
+
+</div>
+<div>
+  @*   <a asp-action="Edit" asp-route-id="@Model?.PetId">Edit</a> |
+    <a asp-action="Index">Back to List</a> *@
+
+    <form asp-action="Edit" asp-route-id="@Model?.PetId" method="post" style="display: inline;">
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+    <form asp-action="Index" method="get" style="margin-top: 20px;">
+        <button type="submit" class="btn btn-secondary">Back to List</button>
+    </form>
+</div>

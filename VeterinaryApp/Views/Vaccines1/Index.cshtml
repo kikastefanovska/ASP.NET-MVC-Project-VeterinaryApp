@@ -1,0 +1,52 @@
+﻿@model IEnumerable<VeterinaryApp.Models.Vaccine>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/css/vaccines.css" asp-append-version="true" />
+
+<p> 
+    <form asp-action="Create" method="get">
+        <button type="submit" class="btn btn-success">Create New</button>
+    </form>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+                <td>
+                    <form asp-action="Edit" asp-route-id="@item.Id" method="post" style="display: inline;">
+                        <button type="submit" class="btn btn-primary">Edit</button>
+                    </form>
+
+                    <form asp-action="Details" asp-route-id="@item.Id" method="post" style="display: inline;">
+                        <button type="submit" class="btn btn-info">Details</button>
+                    </form>
+
+                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display: inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+    <img class="image" src="~/images/pngwing.com (4).png" />
+
+
+<div class="image2">
+    <img src="~/images/pngwing.com (5).png" />
+</div>

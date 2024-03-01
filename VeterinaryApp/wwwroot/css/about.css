@@ -1,0 +1,33 @@
+﻿.text {
+    border: 3px dashed gray;
+    width: 776px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.container {
+    display: block;
+    margin: auto;
+    width: 800px;
+    margin-top: 50px;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+}
+
+.image {
+    position: absolute;
+    left: -105px;
+    top: 75px;
+}
+
+.image2 {
+    position: absolute;
+    right: 200px;
+    bottom: 240px;
+    transform: scale(0.6);
+    z-index: -10;
+}
